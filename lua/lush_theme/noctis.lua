@@ -1,47 +1,3 @@
---
--- Built with,
---
---        ,gggg,
---       d8" "8I                         ,dPYb,
---       88  ,dP                         IP'`Yb
---    8888888P"                          I8  8I
---       88                              I8  8'
---       88        gg      gg    ,g,     I8 dPgg,
---  ,aa,_88        I8      8I   ,8'8,    I8dP" "8I
--- dP" "88P        I8,    ,8I  ,8'  Yb   I8P    I8
--- Yb,_,d88b,,_   ,d8b,  ,d8b,,8'_   8) ,d8     I8,
---  "Y8P"  "Y888888P'"Y88P"`Y8P' "YY8P8P88P     `Y8
---
-
--- This is a starter colorscheme for use with Lush,
--- for usage guides, see :h lush or :LushRunTutorial
-
---
--- Note: Because this is a lua file, vim will append it to the runtime,
---       which means you can require(...) it in other lua code (this is useful),
---       but you should also take care not to conflict with other libraries.
---
---       (This is a lua quirk, as it has somewhat poor support for namespacing.)
---
---       Basically, name your file,
---
---       "super_theme/lua/lush_theme/super_theme_dark.lua",
---
---       not,
---
---       "super_theme/lua/dark.lua".
---
---       With that caveat out of the way...
---
-
--- Enable lush.ify on this file, run:
---
---  `:Lushify`
---
---  or
---
---  `:lua require('lush').ify()`
-
 local lush = require('lush')
 local hsl = lush.hsl
 
@@ -55,20 +11,20 @@ local theme = lush(function()
     BoldItalic                             { gui="bold,italic", }, -- Bold           xxx cterm=bold gui=bold
     Underlined                             { gui="underline", }, -- Underlined     xxx cterm=underline gui=underline
     SpecialKey                             { fg="cyan", }, -- SpecialKey     xxx ctermfg=81 guifg=Cyan
-    EndOfBuffer                            { fg="#000000", }, -- EndOfBuffer    
+    EndOfBuffer                            { fg="#161616", }, -- EndOfBuffer    
     NvimTreeEndOfBuffer                    { EndOfBuffer }, -- NvimTreeEndOfBuffer xxx links to EndOfBuffer
     DiffviewEndOfBuffer                    { EndOfBuffer }, -- DiffviewEndOfBuffer xxx links to EndOfBuffer
     TermCursor                             { gui="reverse", }, -- TermCursor     xxx cterm=reverse gui=reverse
     GitSignsAddInline                      { TermCursor }, -- GitSignsAddInline xxx links to TermCursor
     GitSignsDeleteInline                   { TermCursor }, -- GitSignsDeleteInline xxx links to TermCursor
     GitSignsChangeInline                   { TermCursor }, -- GitSignsChangeInline xxx links to TermCursor
-    NonText                                { fg="#535353", }, -- NonText        xxx guifg=#535353
+    NonText                                { fg="#525253", }, -- NonText        xxx guifg=#535353
     DiffviewNonText                        { NonText }, -- DiffviewNonText xxx links to NonText
     TelescopeResultsDiffUntracked          { NonText }, -- TelescopeResultsDiffUntracked xxx links to NonText
     TelescopePromptCounter                 { NonText }, -- TelescopePromptCounter xxx links to NonText
     TelescopePreviewHyphen                 { NonText }, -- TelescopePreviewHyphen xxx links to NonText
     GitSignsCurrentLineBlame               { NonText }, -- GitSignsCurrentLineBlame xxx links to NonText
-    Directory                              { fg="#8cb6ff", }, -- Directory      xxx guifg=#8cb6ff
+    Directory                              { fg="cyan", }, -- Directory      xxx guifg=#8cb6ff
     DiffviewFolderName                     { Directory }, -- DiffviewFolderName xxx links to Directory
     TelescopePreviewDirectory              { Directory }, -- TelescopePreviewDirectory xxx links to Directory
     TelescopePreviewDate                   { Directory }, -- TelescopePreviewDate xxx links to Directory
@@ -98,11 +54,11 @@ local theme = lush(function()
     NvimTreeStatusLine                     { StatusLine }, -- NvimTreeStatusLine xxx links to StatusLine
     DiffviewStatusLine                     { StatusLine }, -- DiffviewStatusLine xxx links to StatusLine
     MiniStatuslineFilename                 { StatusLine }, -- MiniStatuslineFilename xxx links to StatusLine
-    StatusLineNC                           { fg="#7b7c7e", bg="#0c0c0c", }, -- StatusLineNC   xxx guifg=#7b7c7e guibg=#0c0c0c
+    StatusLineNC                           { fg="#0c0c0c", bg="#8cb6ff", }, -- StatusLineNC   xxx guifg=#7b7c7e guibg=#0c0c0c
     NvimTreeStatusLineNC                   { StatusLineNC }, -- NvimTreeStatusLineNC xxx links to StatusLineNC
     DiffviewStatusLineNC                   { StatusLineNC }, -- DiffviewStatusLineNC xxx links to StatusLineNC
     MiniStatuslineInactive                 { StatusLineNC }, -- MiniStatuslineInactive xxx links to StatusLineNC
-    VertSplit                              { fg="#0c0c0c", }, -- VertSplit      xxx guifg=#0c0c0c
+    VertSplit                              { fg="grey", }, -- VertSplit      xxx guifg=#0c0c0c
     WinSeparator                           { VertSplit }, -- WinSeparator   xxx links to VertSplit
     NvimTreeVertSplit                      { VertSplit }, -- NvimTreeVertSplit xxx links to VertSplit
     Title                                  { fg="#8cb6ff", }, -- Title          xxx guifg=#8cb6ff
@@ -157,15 +113,15 @@ local theme = lush(function()
     MiniTablineFill                        { TabLineFill }, -- MiniTablineFill xxx links to TabLineFill
     CursorColumn                           { bg="grey40", }, -- CursorColumn   xxx ctermbg=242 guibg=Grey40
     NvimTreeCursorColumn                   { CursorColumn }, -- NvimTreeCursorColumn xxx links to CursorColumn
-    CursorLine                             { bg="#353535", }, -- CursorLine     xxx guibg=#353535
+    CursorLine                             { bg="#222222", }, -- CursorLine     xxx guibg=#353535
     QuickFixLine                           { CursorLine }, -- QuickFixLine   xxx links to CursorLine
     NvimTreeCursorLine                     { CursorLine }, -- NvimTreeCursorLine xxx links to CursorLine
     DiffviewCursorLine                     { CursorLine }, -- DiffviewCursorLine xxx links to CursorLine
-    TelescopeSelection                     { CursorLine }, -- TelescopeSelection xxx links to CursorLine
+    TelescopeSelection                     { Bold }, -- TelescopeSelection xxx links to CursorLine
     ColorColumn                            { bg="#252525", }, -- ColorColumn    xxx guibg=#252525
     Whitespace                             { fg="#353535", }, -- Whitespace     xxx guifg=#353535
-    NormalNC                               { fg="#f2f4f8", bg="#161616", }, -- NormalNC       xxx guifg=#f2f4f8 guibg=#161616
-    NormalFloat                            { fg="#f2f4f8", bg="#0c0c0c", }, -- NormalFloat    xxx guifg=#f2f4f8 guibg=#0c0c0c
+    NormalNC                               { fg="#f2f4f8", bg="#141414", }, -- NormalNC       xxx guifg=#f2f4f8 guibg=#161616
+    NormalFloat                            { fg="#f2f4f8", bg="#171717", }, -- NormalFloat    xxx guifg=#f2f4f8 guibg=#0c0c0c
     FloatBorder                            { fg="#7b7c7e", }, -- FloatBorder    xxx guifg=#7b7c7e
     DapUIFloatBorder                       { FloatBorder }, -- DapUIFloatBorder xxx links to FloatBorder
     FloatTitle                             { FloatBorder }, -- FloatTitle     xxx links to FloatBorder
@@ -176,7 +132,7 @@ local theme = lush(function()
     RedrawDebugComposed                    { bg="green", }, -- RedrawDebugComposed xxx ctermbg=10 guibg=Green
     RedrawDebugRecompose                   { bg="red", }, -- RedrawDebugRecompose xxx ctermbg=9 guibg=Red
     lCursor                                { fg="bg", bg="fg", }, -- lCursor        xxx guifg=bg guibg=fg
-    Normal                                 { fg="#f2f4f8", bg="#161616", }, -- Normal         xxx guifg=#f2f4f8 guibg=#161616
+    Normal                                 { fg="#66ffbf", bg="#141414", }, -- Normal         xxx guifg=#f2f4f8 guibg=#161616
     NvimSpacing                            { Normal }, -- NvimSpacing    xxx links to Normal
     NvimTreePopup                          { Normal }, -- NvimTreePopup  xxx links to Normal
     DiffviewSignColumn                     { Normal }, -- DiffviewSignColumn xxx links to Normal
@@ -203,11 +159,6 @@ local theme = lush(function()
     cssBraceError                          { Error }, -- cssBraceError  xxx links to Error
     cssDeprecated                          { Error }, -- cssDeprecated  xxx links to Error
     markdownError                          { Error }, -- markdownError  xxx links to Error
-    Todo                                   { fg="#161616", bg="yellow", }, -- Todo           xxx guifg=#161616 guibg=#78a9ff
-    TSTodo                                 { Todo }, -- TSTodo         xxx links to Todo
-    luaTodo                                { Todo }, -- luaTodo        xxx links to Todo
-    javaScriptCommentTodo                  { Todo }, -- javaScriptCommentTodo xxx links to Todo
-    vbTodo                                 { Todo }, -- vbTodo         xxx links to Todo
     String                                 { fg="#66ffbf", }, -- String         xxx guifg=#25be6a
     Character                              { String }, -- Character      xxx links to String
     NvimString                             { String }, -- NvimString     xxx links to String
@@ -438,7 +389,7 @@ local theme = lush(function()
     NvimDapVirtualTextInfo                 { DiagnosticVirtualTextInfo }, -- NvimDapVirtualTextInfo xxx links to DiagnosticVirtualTextInfo
     DiagnosticVirtualTextHint              { fg="#3ddbd9", bg="#1c3433", }, -- DiagnosticVirtualTextHint xxx guifg=#3ddbd9 guibg=#1c3433
     MatchParen                             { gui="bold", fg="#be95ff", }, -- MatchParen     xxx cterm=bold gui=bold guifg=#be95ff
-    Comment                                { fg="#6e6f70", }, -- Comment        xxx guifg=#6e6f70
+    Comment                                { fg="#6e6f70", Italic }, -- Comment        xxx guifg=#6e6f70
     NvimTreeGitIgnored                     { Comment }, -- NvimTreeGitIgnored xxx links to Comment
     DiffviewDiffDelete                     { Comment }, -- DiffviewDiffDelete xxx links to Comment
     DiffviewFilePanelPath                  { Comment }, -- DiffviewFilePanelPath xxx links to Comment
@@ -465,6 +416,11 @@ local theme = lush(function()
     cssVendor                              { Comment }, -- cssVendor      xxx links to Comment
     cssHacks                               { Comment }, -- cssHacks       xxx links to Comment
     markdownBlockquote                     { Comment }, -- markdownBlockquote xxx links to Comment
+    Todo                                   { fg="#000000", bg="yellow", }, -- Todo           xxx guifg=#161616 guibg=#78a9ff
+    TSTodo                                 { Todo }, -- TSTodo         xxx links to Todo
+    luaTodo                                { Todo }, -- luaTodo        xxx links to Todo
+    javaScriptCommentTodo                  { Todo }, -- javaScriptCommentTodo xxx links to Todo
+    vbTodo                                 { Todo }, -- vbTodo         xxx links to Todo
     htmlLink                               { Underlined }, -- htmlLink       xxx links to Underlined
     Ignore                                 { fg="bg", }, -- Ignore         xxx ctermfg=0 guifg=bg
     NvimInternalError                      { fg="red", bg="red", }, -- NvimInternalError xxx ctermfg=9 ctermbg=9 guifg=Red guibg=Red
@@ -493,11 +449,11 @@ local theme = lush(function()
     NvimTreeBookmark                       { fg="#25be6a", }, -- NvimTreeBookmark xxx guifg=#25be6a
     NvimTreeIndentMarker                   { fg="#535353", }, -- NvimTreeIndentMarker xxx guifg=#535353
     NvimTreeSymlink                        { fg="#d96b9b", }, -- NvimTreeSymlink xxx guifg=#d96b9b
-    NvimTreeFolderIcon                     { fg="#78a9ff", }, -- NvimTreeFolderIcon xxx guifg=#78a9ff
-    NvimTreeRootFolder                     { gui="bold", fg="#3ddbd9", }, -- NvimTreeRootFolder xxx cterm=bold gui=bold guifg=#3ddbd9
+    NvimTreeFolderIcon                     { fg="#cbcb41", }, -- NvimTreeFolderIcon xxx guifg=#78a9ff
+    NvimTreeRootFolder                     { gui="bold,italic", fg="#ff91c1", }, -- NvimTreeRootFolder xxx cterm=bold gui=bold guifg=#3ddbd9
     NvimTreeExecFile                       { gui="bold", fg="#25be6a", }, -- NvimTreeExecFile xxx gui=bold guifg=#25be6a
     NvimTreeSpecialFile                    { fg="#33b1ff", }, -- NvimTreeSpecialFile xxx guifg=#33b1ff
-    NvimTreeNormal                         { fg="#f2f4f8", bg="#0c0c0c", }, -- NvimTreeNormal xxx guifg=#f2f4f8 guibg=#0c0c0c
+    NvimTreeNormal                         { fg="#bebebe", bg="#161616", }, -- NvimTreeNormal xxx guifg=#f2f4f8 guibg=#0c0c0c
     NvimTreeNormalNC                       { NvimTreeNormal }, -- NvimTreeNormalNC xxx links to NvimTreeNormal
     NvimTreeSignColumn                     { NvimTreeNormal }, -- NvimTreeSignColumn xxx links to NvimTreeNormal
     NvimTreeFolderName                     { fg="#78a9ff", }, -- NvimTreeFolderName xxx guifg=#78a9ff
@@ -788,7 +744,7 @@ local theme = lush(function()
     BufferLineOffsetSeparator              { fg="#0c0c0c", bg="#0c0c0c", }, -- BufferLineOffsetSeparator xxx cterm= gui= guifg=#0c0c0c guibg=#0c0c0c
     BufferLineDuplicateSelected            { gui="underline,italic", fg="#161616", bg="#7b7c7e", }, -- BufferLineDuplicateSelected xxx cterm=underline,italic gui=underline,italic guifg=#161616 guibg=#7b7c7e
     BufferLineInfo                         { sp="#78a9ff", fg="#6e6f70", bg="#101010", }, -- BufferLineInfo xxx cterm= gui= guifg=#6e6f70 guibg=#101010 guisp=#78a9ff
-    BufferLineNumbersSelected              { gui="bold,italic", fg="#f2f4f8", bg="#161616", }, -- BufferLineNumbersSelected xxx cterm=bold,italic gui=bold,italic guifg=#f2f4f8 guibg=#161616
+    BufferLineNumbersSelected              { gui="italic", fg="#f2f4f8", bg="#161616", }, -- BufferLineNumbersSelected xxx cterm=bold,italic gui=bold,italic guifg=#f2f4f8 guibg=#161616
     BufferLineWarning                      { sp="#be95ff", fg="#6e6f70", bg="#101010", }, -- BufferLineWarning xxx cterm= gui= guifg=#6e6f70 guibg=#101010 guisp=#be95ff
     BufferLineHintVisible                  { fg="#6e6f70", bg="#141414", }, -- BufferLineHintVisible xxx cterm= gui= guifg=#6e6f70 guibg=#141414
     BufferLineHint                         { sp="#3ddbd9", fg="#6e6f70", bg="#101010", }, -- BufferLineHint xxx cterm= gui= guifg=#6e6f70 guibg=#101010 guisp=#3ddbd9
@@ -873,7 +829,7 @@ local theme = lush(function()
     commentTSWarning                       { TSWarning }, -- commentTSWarning xxx links to TSWarning
     TSDanger                               { fg="#ee5396", }, -- TSDanger       xxx guifg=#ee5396
     commentTSDanger                        { TSDanger }, -- commentTSDanger xxx links to TSDanger
-    TSTypeBuiltin                          { fg="#52bdff", Italic }, -- TSTypeBuiltin  xxx guifg=#52bdff
+    TSTypeBuiltin                          { fg="#ffc69d", Italic }, -- TSTypeBuiltin  xxx guifg=#52bdff
     TSField                                { fg="#78a9ff", }, -- TSField        xxx guifg=#78a9ff
     CmpItemKindEnumMember                  { TSField }, -- CmpItemKindEnumMember xxx links to TSField
     CmpItemKindTypeParameter               { TSField }, -- CmpItemKindTypeParameter xxx links to TSField
@@ -890,7 +846,7 @@ local theme = lush(function()
     TSKeywordFunction                      { fg="#ff7039", Bold }, -- TSKeywordFunction xxx guifg=#ee5396
     luaTSKeywordFunction                   { TSKeywordFunction }, -- luaTSKeywordFunction xxx links to TSKeywordFunction
     TSKeywordOperator                      { gui="bold", fg="#b6b8bb", }, -- TSKeywordOperator xxx cterm=bold gui=bold guifg=#b6b8bb
-    TSOperator                             { fg="#b6b8bb", }, -- TSOperator     xxx guifg=#b6b8bb
+    TSOperator                             { fg="#b6b8bb", Bold }, -- TSOperator     xxx guifg=#b6b8bb
     luaTSOperator                          { TSOperator }, -- luaTSOperator  xxx links to TSOperator
     TSNamespace                            { fg="#52bdff", }, -- TSNamespace    xxx guifg=#52bdff
     CmpItemKindModule                      { TSNamespace }, -- CmpItemKindModule xxx links to TSNamespace
@@ -909,7 +865,7 @@ local theme = lush(function()
     TelescopeTitle                         { TelescopeBorder }, -- TelescopeTitle xxx links to TelescopeBorder
     TelescopePromptBorder                  { TelescopeBorder }, -- TelescopePromptBorder xxx links to TelescopeBorder
     TelescopeResultsBorder                 { TelescopeBorder }, -- TelescopeResultsBorder xxx links to TelescopeBorder
-    TelescopeSelectionCaret                { fg="#3ddbd9", }, -- TelescopeSelectionCaret xxx guifg=#3ddbd9
+    TelescopeSelectionCaret                { fg="#ffffff", }, -- TelescopeSelectionCaret xxx guifg=#3ddbd9
     BufferLineDevIconLuaSelected           { fg="#51a0cf", bg="#161616", }, -- BufferLineDevIconLuaSelected xxx cterm= gui= guifg=#51a0cf guibg=#161616
     TSVariable                             { fg="#ffb966", }, -- TSVariable     xxx guifg=#dfdfe0
     CmpItemKindVariable                    { TSVariable }, -- CmpItemKindVariable xxx links to TSVariable
