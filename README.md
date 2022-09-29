@@ -29,6 +29,7 @@ colorscheme noctis
 3. Lualine
 4. Bufferline
 5. NvimTree
+6. GitSigns
 
 ## Inspired by
 
