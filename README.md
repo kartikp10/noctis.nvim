@@ -6,14 +6,17 @@ A neovim port of the Noctis theme for VSCode with TreeSitter support.
 
 ## Installation
 
-| Plugin Manager                                       | Command                                                                            |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [Packer](https://github.com/wbthomason/packer.nvim)  | `use 'kartikp10/noctis.nvim'`                                                      |
-| [Vim-plug](https://github.com/junegunn/vim-plug)     | `Plug 'kartikp10/noctis.nvim'`                                                     |
-| [NeoBundle](https://github.com/Shougo/neobundle.vim) | `NeoBundle 'kartikp10/noctis.nvim'`                                                |
-| [Vundle](https://github.com/VundleVim/Vundle.vim)    | `Bundle 'kartikp10/noctis.nvim'`                                                   |
-| [Pathogen](https://github.com/tpope/vim-pathogen)    | `git clone https://github.com/kartikp10/noctis.nvim.git ~/.vim/bundle/noctis.nvim` |
-| [Dein](https://github.com/Shougo/dein.vim)           | `call dein#add('kartikp10/noctis.nvim')`                                           |
+[lush.nvim](https://github.com/rktjmp/lush.nvim) is also needed to use this
+colorscheme.
+
+| Plugin Manager                                       | Command                                                                                                                                                         |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------                                                                              |
+| [Packer](https://github.com/wbthomason/packer.nvim)  | `use { 'kartikp10/noctis.nvim', requires = 'rktjmp/lush.nvim'`                                                                                                  |
+| [Vim-plug](https://github.com/junegunn/vim-plug)     | `Plug 'kartikp10/noctis.nvim' | Plug 'rktjmp/lush.nvim'`                                                                                                        |
+| [NeoBundle](https://github.com/Shougo/neobundle.vim) | `NeoBundle 'kartikp10/noctis.nvim', {'depends': 'rktjmp/lush.nvim'}`                                                                                            |
+| [Vundle](https://github.com/VundleVim/Vundle.vim)    | `Plugin 'kartikp10/noctis.nvim' | Plug 'rktjmp/lush.nvim'`                                                                                                      |
+| [Pathogen](https://github.com/tpope/vim-pathogen)    | `git clone https://github.com/kartikp10/noctis.nvim.git ~/.vim/bundle/noctis.nvim && git clone https://github.com/rktjmp/lush.nvim.git ~/.vim/bundle/lush.nvim` |
+| [Dein](https://github.com/Shougo/dein.vim)           | `call dein#add('kartikp10/noctis.nvim') | call dein#add('rktjmp/lush.nvim')`                                                                                    |
 
 ## Usage
 
