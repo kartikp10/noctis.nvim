@@ -1,6 +1,6 @@
 # Noctis for Neovim
 
-A neovim port of Noctis theme for VSCode with TreeSitter support.
+A neovim port of the Noctis theme for VSCode with TreeSitter support.
 
 <img width="1792" alt="noctis nvim" src="./screenshots/noctis_screenshot_1.png">
 
@@ -29,3 +29,12 @@ colorscheme noctis
 3. Lualine
 4. Bufferline
 5. NvimTree
+
+## Inspired by
+
+This colorscheme is inspired by the following:
+1. [nightfox.nvim](https://github.com/EdenEast/nightfox.nvim) 
+2. [noctis-hc](https://github.com/KamenKolev/noctis-hc) 
+3. [noctis](https://github.com/liviuschera/noctis)
+
+If you're interested in creating your own theme I highly recommend checking out [lush.nvim](https://github.com/rktjmp/lush.nvim) to get started. It provides real-time feedback and guides you in building structured colorschemes. 
