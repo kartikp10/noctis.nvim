@@ -1,9 +1,7 @@
 local lush = require('lush')
 local hsl = lush.hsl
 
--- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
--- support an annotation like the following. Consult your server documentation.
----@diagnostic disable: undefined-global
+
 local theme = lush(function()
   return {
     Italic                                 { gui="italic", }, -- Italic         xxx cterm=italic gui=italic
@@ -1044,7 +1042,7 @@ local theme = lush(function()
   }
 end)
 
--- Return our parsed theme for extension or use elsewhere.
+
 return theme
 
 -- vi:nowrap
