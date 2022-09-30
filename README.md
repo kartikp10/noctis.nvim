@@ -13,7 +13,7 @@ Currently [lush.nvim](https://github.com/rktjmp/lush.nvim) is a pre-requisite. I
 
 | Plugin Manager                                       | Command                                                                            |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [Packer](https://github.com/wbthomason/packer.nvim)  | `use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim'} }`                |
+| [Packer](https://github.com/wbthomason/packer.nvim)  | `use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }`                |
 | [Vim-plug](https://github.com/junegunn/vim-plug)     | `Plug 'kartikp10/noctis.nvim'`                                                     |
 | [NeoBundle](https://github.com/Shougo/neobundle.vim) | `NeoBundle 'kartikp10/noctis.nvim'`                                                |
 | [Vundle](https://github.com/VundleVim/Vundle.vim)    | `Bundle 'kartikp10/noctis.nvim'`                                                   |
