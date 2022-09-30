@@ -2,7 +2,7 @@
 
 A neovim port of the Noctis theme for VSCode with TreeSitter support.
 
-> Note: This colorscheme is under active development, but is mostly usable at this point. A bunch of useful features with mostly no breaking changes will be added.
+> Note: This colorscheme is under active development, but is mostly usable at this point. Docs and a bunch of useful features with mostly no breaking changes will be added.
 
 <img width="1792" alt="noctis nvim" src="https://user-images.githubusercontent.com/24954962/193131998-90f51940-a307-4af5-a225-01ee94c50991.png">
 
